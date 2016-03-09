@@ -2,6 +2,6 @@
 {
     public interface IServis
     {
-        void ShowMessage();
+        void ShowMessage(string param);
     }
 }

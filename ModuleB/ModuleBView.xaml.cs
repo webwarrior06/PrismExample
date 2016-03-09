@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Practices.Unity;
 
 namespace nsModuleB
 {
@@ -20,10 +21,10 @@ namespace nsModuleB
     /// </summary>
     public partial class ModuleBView : UserControl
     {
-        public ModuleBView()
+        public ModuleBView(IUnityContainer container)
         {
             InitializeComponent();
-            DataContext = new ModuleBViewModel();
+            DataContext = container.Resolve<ModuleBViewModel>(new PropertyOverride("InjectionValue", "hey naber 2!"));
         }
     }
 }

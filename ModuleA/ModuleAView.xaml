@@ -6,5 +6,10 @@
              d:DesignHeight="300"
              d:DesignWidth="300"
              mc:Ignorable="d">
-    <TextBlock FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center">module a</TextBlock>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock FontSize="30">module a</TextBlock>
+        <TextBlock FontSize="30" Text="{Binding Adi}" />
+
+
+    </StackPanel>
 </UserControl>

@@ -9,9 +9,9 @@ namespace Infrastructure.Model
 {
     public class Servis : IServis
     {
-        public void ShowMessage()
+        public void ShowMessage(string param)
         {
-            MessageBox.Show("Servisten çağırıldı");
+            MessageBox.Show("Servisten çağırıldı: "+param);
         }
     }
 }

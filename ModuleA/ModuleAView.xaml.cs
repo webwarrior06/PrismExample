@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Practices.Unity;
 
 namespace nsModuleA
 {
@@ -20,10 +21,10 @@ namespace nsModuleA
     /// </summary>
     public partial class ModuleAView : UserControl
     {
-        public ModuleAView()
+        public ModuleAView(IUnityContainer container)
         {
             InitializeComponent();
-            DataContext= new ModuleAViewModel();
+            DataContext = container.Resolve<ModuleAViewModel>();
         }
     }
 }
