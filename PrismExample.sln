@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismExample", "PrismExampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{60DDD8D0-42C9-4C42-8CE4-32450826CDBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleA", "ModuleA\ModuleA.csproj", "{03196778-16DE-4545-B568-B89D1312B1DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleB", "ModuleB\ModuleB.csproj", "{3F59D999-9632-498E-B3C1-58C5A05953D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{60DDD8D0-42C9-4C42-8CE4-32450826CDBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60DDD8D0-42C9-4C42-8CE4-32450826CDBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60DDD8D0-42C9-4C42-8CE4-32450826CDBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03196778-16DE-4545-B568-B89D1312B1DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03196778-16DE-4545-B568-B89D1312B1DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03196778-16DE-4545-B568-B89D1312B1DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03196778-16DE-4545-B568-B89D1312B1DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F59D999-9632-498E-B3C1-58C5A05953D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F59D999-9632-498E-B3C1-58C5A05953D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F59D999-9632-498E-B3C1-58C5A05953D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F59D999-9632-498E-B3C1-58C5A05953D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
