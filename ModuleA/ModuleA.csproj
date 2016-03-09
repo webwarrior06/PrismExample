@@ -112,6 +112,10 @@
       <Project>{60DDD8D0-42C9-4C42-8CE4-32450826CDBA}</Project>
       <Name>Infrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ModuleB\ModuleB.csproj">
+      <Project>{3F59D999-9632-498E-B3C1-58C5A05953D5}</Project>
+      <Name>ModuleB</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -43,7 +43,7 @@ namespace PrismExample
 
             var moduleBInfo = new ModuleInfo
             {
-                InitializationMode = InitializationMode.WhenAvailable,
+                InitializationMode = InitializationMode.OnDemand,
                 ModuleName = typeof(ModuleB).Name,
                 ModuleType = typeof(ModuleB).AssemblyQualifiedName
             };

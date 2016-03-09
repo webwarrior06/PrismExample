@@ -28,9 +28,6 @@ namespace nsModuleB
             _container = container;
             _user = user;
             _servis = servis;
-
-
-           
         }
 
 

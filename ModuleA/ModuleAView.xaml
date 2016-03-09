@@ -9,7 +9,7 @@
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
         <TextBlock FontSize="30">module a</TextBlock>
         <TextBlock FontSize="30" Text="{Binding Adi}" />
-
+        <Button Command="{Binding LoadBModuleCommand}">LoadModule B</Button>
 
     </StackPanel>
 </UserControl>
