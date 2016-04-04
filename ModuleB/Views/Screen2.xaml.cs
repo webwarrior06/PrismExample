@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using nsModuleB.ViewModels;
 
 namespace nsModuleB.Views
 {
@@ -23,6 +24,10 @@ namespace nsModuleB.Views
         public Screen2()
         {
             InitializeComponent();
+            DataContext = new Screen2VM();
+
+
+
         }
     }
 }

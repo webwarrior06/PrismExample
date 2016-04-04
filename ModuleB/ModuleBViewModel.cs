@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Windows;
 using System.Windows.Controls;
 using Infrastructure.Events;
 using Infrastructure.Model;

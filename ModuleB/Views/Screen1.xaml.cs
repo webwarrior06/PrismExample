@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using nsModuleB.ViewModels;
 
 namespace nsModuleB.Views
 {
@@ -10,6 +11,7 @@ namespace nsModuleB.Views
         public Screen1()
         {
             InitializeComponent();
+            DataContext = new Screen1VM();
         }
     }
 }

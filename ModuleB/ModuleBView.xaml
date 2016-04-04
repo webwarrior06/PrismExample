@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:regions="http://prismlibrary.com/"
              xmlns:metro="clr-namespace:MahApps.Metro;assembly=MahApps.Metro"
+             xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
              d:DesignHeight="300"
              d:DesignWidth="300"
 
@@ -34,7 +35,14 @@
             <TextBlock Text="ModuleBInnerRegion"/>
             <metro:PackIconMaterial Kind="ArrowDownBoldCircleOutline" HorizontalAlignment="Right"/>
         </StackPanel>
-        <ContentControl Grid.Row="4" regions:RegionManager.RegionName="ModuleBInnerRegion"/>
+        <TabControl Grid.Row="4" regions:RegionManager.RegionName="ModuleBInnerRegion">
+            <TabControl.Resources>
+                <Style TargetType="TabItem">
+                    <Setter Property="Header" Value="{Binding DataContext.Title}"></Setter>
+                </Style>
+            </TabControl.Resources>
+            
+            </TabControl>
     </Grid>
     
 
