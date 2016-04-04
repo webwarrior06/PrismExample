@@ -55,18 +55,6 @@
       <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Prism, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.Core.6.1.0\lib\net45\Prism.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Prism.Unity.Wpf, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.Unity.6.2.0-pre3\lib\net45\Prism.Unity.Wpf.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Prism.Wpf, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.Wpf.6.1.1-pre2\lib\net45\Prism.Wpf.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -134,6 +122,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Prism-master\Source\Prism\Prism.csproj">
+      <Project>{e6c50355-d01e-4caa-884d-d7929861315c}</Project>
+      <Name>Prism</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Prism-master\Source\Wpf\Prism.Unity.Wpf\Prism.Unity.Wpf.csproj">
+      <Project>{c1ce34c7-6ac9-4d54-bad0-8467e9f9f38d}</Project>
+      <Name>Prism.Unity.Wpf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Prism-master\Source\Wpf\Prism.Wpf\Prism.Wpf.csproj">
+      <Project>{5912ff03-c72b-4f56-baa1-8642fdbfbc26}</Project>
+      <Name>Prism.Wpf</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
       <Project>{60DDD8D0-42C9-4C42-8CE4-32450826CDBA}</Project>
       <Name>Infrastructure</Name>
