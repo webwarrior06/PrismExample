@@ -3,13 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
              d:DesignHeight="300"
+             Background="Orange"
              d:DesignWidth="300"
              mc:Ignorable="d">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <TextBlock FontSize="30">module a</TextBlock>
-        <TextBlock FontSize="30" Text="{Binding Adi}" />
-        <Button Command="{Binding LoadBModuleCommand}">LoadModule B</Button>
-
+        <TextBlock FontSize="30">Module A Content</TextBlock>
+        <TextBlock Margin="3"  FontSize="14" Text="{Binding Adi}" />
+        <Button Command="{Binding LoadBModuleCommand}" Margin="3">Load Module B</Button>
+        <TextBox Margin="3"
+                 Style="{DynamicResource MetroButtonTextBox}"
+                 controls:TextBoxHelper.ButtonCommand="{Binding SetTextCommand}"
+                 controls:TextBoxHelper.ButtonCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
+                 controls:TextBoxHelper.ButtonContent="4"
+                 controls:TextBoxHelper.Watermark="Fire Text Changed Event"/>
     </StackPanel>
 </UserControl>

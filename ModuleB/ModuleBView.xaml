@@ -3,12 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:regions="http://prismlibrary.com/"
+             xmlns:metro="clr-namespace:MahApps.Metro;assembly=MahApps.Metro"
              d:DesignHeight="300"
              d:DesignWidth="300"
+
+             Background=" YellowGreen"
              mc:Ignorable="d">
-    <TextBlock HorizontalAlignment="Center"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock HorizontalAlignment="Center"
                VerticalAlignment="Center"
                FontSize="30">
-        module b
-    </TextBlock>
+        Module B Content
+        </TextBlock>
+        <TextBlock Grid.Row="1" Text="{Binding EventResult}" TextAlignment="Center"/>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Margin="2" Command="{Binding NavigateCommand}" CommandParameter="1">Navigate Scr 1</Button>
+            <Button Margin="2" Command="{Binding NavigateCommand}" CommandParameter="2">Navigate Scr 2</Button>
+
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="2">
+            <TextBlock Text="ModuleBInnerRegion"/>
+            <metro:PackIconMaterial Kind="ArrowDownBoldCircleOutline" HorizontalAlignment="Right"/>
+        </StackPanel>
+        <ContentControl Grid.Row="4" regions:RegionManager.RegionName="ModuleBInnerRegion"/>
+    </Grid>
+    
+
+    
+    
 </UserControl>

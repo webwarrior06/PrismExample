@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Practices.Unity;
+using nsModuleB.Views;
 using Prism.Modularity;
 using Prism.Regions;
+using Prism.Unity;
 
 namespace nsModuleB
 {
@@ -23,6 +25,10 @@ namespace nsModuleB
         public void Initialize()
         {
             _rm.RegisterViewWithRegion("ModuleBRegion", typeof(ModuleBView));
+
+            _contaier.RegisterTypeForNavigation<Screen1>();
+            _contaier.RegisterTypeForNavigation<Screen2>();
+
 
         }
     }

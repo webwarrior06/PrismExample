@@ -3,21 +3,62 @@
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                       xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-                      xmlns:local="clr-namespace:PrismExample"
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                       xmlns:regions="http://prismlibrary.com/"
+                      xmlns:metro="clr-namespace:MahApps.Metro;assembly=MahApps.Metro"
                       Title="MainWindow"
-                      Width="525"
-                      Height="350"
+                      BorderThickness="1"
+                      BorderBrush="{DynamicResource AccentColorBrush}"
+                      TitleCaps="False"
+                      Width="800"
+                      Height="600"
                       mc:Ignorable="d">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
 
-        <ContentControl regions:RegionManager.RegionName="ModuleARegion" />
-        <ContentControl Grid.Column="1" regions:RegionManager.RegionName="ModuleBRegion" />
+
+        <TabControl controls:TabControlHelper.IsUnderlined="True">
+            <TabItem Header="Modules" controls:ControlsHelper.HeaderFontSize="14" FontSize="14">
+                <Grid ShowGridLines="True"  Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Margin="2">
+                        <TextBlock Text="ModuleARegion"/>
+                        <metro:PackIconMaterial Height="24" Width="24" Kind="ArrowDownBoldCircleOutline" HorizontalAlignment="Right"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Orientation="Horizontal"  Margin="2">
+                        <TextBlock Text="ModuleBRegion"/>
+                        <metro:PackIconMaterial Height="24" Width="24" Kind="ArrowDownBoldCircleOutline" HorizontalAlignment="Right"/>
+                    </StackPanel>
+
+                    <ContentControl Grid.Row="1" regions:RegionManager.RegionName="ModuleARegion"/>
+                    <ContentControl Grid.Column="1" Grid.Row="1" regions:RegionManager.RegionName="ModuleBRegion" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Navigation" controls:ControlsHelper.HeaderFontSize="14" FontSize="14">
+                <Expander ExpandDirection="Right" UseLayoutRounding="True">
+                    <Expander.Header>
+                        <TextBlock Text="sdasdasdas" VerticalAlignment="Center" SnapsToDevicePixels="True"  UseLayoutRounding="True" Foreground="{DynamicResource IdealForegroundColorBrush}">
+                            <TextBlock.LayoutTransform>
+                                <RotateTransform Angle="270" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </Expander.Header>
+                    
+                    <TextBlock>dsadasd</TextBlock>
+                    
+                </Expander>
+                
+            </TabItem>
+
+        </TabControl>
+
+
 
     </Grid>
 </controls:MetroWindow>

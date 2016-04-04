@@ -51,7 +51,7 @@ namespace PrismExample
             ModuleCatalog.AddModule(moduleAInfo);
             ModuleCatalog.AddModule(moduleBInfo);
 
-            var userInfo = new UserInfo {AdiSoyadi = "taha"};
+            var userInfo = new UserInfo {AdiSoyadi = "This text was loaded from shared service"};
 
             Container.RegisterInstance<IUserInfo>(userInfo);
 

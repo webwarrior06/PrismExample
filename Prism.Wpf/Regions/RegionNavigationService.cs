@@ -241,7 +241,7 @@ namespace Prism.Regions
                 activeViews,
                 currentViewIndex + 1);
         }
-
+     
         [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes", Justification = "Exception is marshalled to callback")]
         private void ExecuteNavigation(NavigationContext navigationContext, object[] activeViews, Action<NavigationResult> navigationCallback)
         {
